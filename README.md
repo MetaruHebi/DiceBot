@@ -1,5 +1,6 @@
-# DiceBot
-Telegram-bot for dice dungeons and dragons. Or maybe something else.
+# D&D Dice Roller Bot for Telegram
+
+Telegram-bot for dungeons and dragons. Or maybe something else.
 
 Creating several types of dice.
 
