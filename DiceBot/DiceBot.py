@@ -3,7 +3,7 @@ import random
 from telebot import types
 import config
 
-# Загружаем список интересных фактов
+# Загружаем список интересных фактов (тест)
 f = open('d20.txt', 'r')
 d20 = f.read().split('\n')
 f.close()
