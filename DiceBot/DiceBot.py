@@ -3,11 +3,11 @@ import random
 from telebot import types
 import config
 
-# Загружаем список интересных фактов (тест)
+# Загружаем список значений d20
 f = open('d20.txt', 'r')
 d20 = f.read().split('\n')
 f.close()
-# Загружаем список поговорок
+# Загружаем список значений d8
 f = open('d8.txt', 'r')
 d8  = f.read().split('\n')
 f.close()
@@ -28,7 +28,7 @@ def start(m, res=False):
 @bot.message_handler(content_types=["text"])
 
 def handle_text(message):
-    # Если юзер прислал 1, выдаем ему случайный факт
+    # Бросок d8
     if message.text.strip() == 'd8' :
             answer = random.choice(d8)
     # Бросок d20
