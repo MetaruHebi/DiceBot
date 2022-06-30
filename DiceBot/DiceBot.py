@@ -3,15 +3,6 @@ import random
 from telebot import types
 import config
 
-# Загружаем список значений d20
-f = open('d20.txt', 'r')
-d20 = f.read().split('\n')
-f.close()
-# Загружаем список значений d8
-f = open('d8.txt', 'r')
-d8  = f.read().split('\n')
-f.close()
-
 # Создаем бота
 bot = telebot.TeleBot(config.TOKEN)
 # Команда start
@@ -30,10 +21,10 @@ def start(m, res=False):
 def handle_text(message):
     # Бросок d8
     if message.text.strip() == 'd8' :
-            answer = random.choice(d8)
+            answer = random.randint(1,8)
     # Бросок d20
     elif message.text.strip() == 'd20':
-            answer = random.choice(d20)
+            answer = random.randint(1,20)
     # Отсылаем юзеру сообщение в его чат
     bot.send_message(message.chat.id, answer)
 # Запускаем бота
